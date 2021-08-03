@@ -1,11 +1,17 @@
 import React from "react";
+import {BrowserRouter as Router} from 'react-router-dom';
 import '../../index.css';
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 function App() {
   return (
+    <Router>
     <div className="App">
-      <h1>Kasa</h1>
+      <Header />
+      <Footer />
     </div>
+    </Router>
   );
 }
 
