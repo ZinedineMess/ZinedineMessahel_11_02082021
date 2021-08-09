@@ -5,6 +5,9 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: rgba(226, 226, 224, 0.541);
+    border-radius: 1.5625rem;
+    margin: 2rem 4rem;
 }
 
 .galleryApartmentBox>img {
@@ -44,6 +47,8 @@
 @media screen and (max-width: 650px) {
     .galleryApartmentCard {
         padding: 0;
+        background-color: white;
+        margin: 2rem;
     }
 
     .galleryApartmentBox>img {

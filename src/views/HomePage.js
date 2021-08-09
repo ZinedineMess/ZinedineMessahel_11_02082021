@@ -1,13 +1,18 @@
 import React, {Component} from 'react';
 import HeroBanner from '../components/HeroBanner/HeroBanner';
-import Gallery from '../components/Gallery/Gallery';
+import ApartmentCard from '../components/ApartmentCard/ApartmentCard';
+import {data} from '../datas/data';
 
 class HomePage extends Component {
     render() {
         return (
             <main>
                 <HeroBanner />
-                <Gallery />
+                <section className="galleryApartmentCard">
+                    {data.map((apartment) => {
+                        return <ApartmentCard key={apartment.id} cover={apartment.cover} title={apartment.title} />
+                    })}
+                </section>
             </main>
         )
     }
