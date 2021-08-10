@@ -1,9 +1,14 @@
 import React, {Component} from "react";
-import './Profil.css';
+import about from '../../assets/about.jpeg';
 
 class Profil extends Component {
     render() {
-        return <h1>Profil</h1>
+        return (
+            <div className="apartmentProfil">
+                <p className="apartmentNameHost">Nathalie Jean</p>
+                <img className="apartmentImgHost" alt="" src={about} />
+            </div>
+        )
     }
 }
 

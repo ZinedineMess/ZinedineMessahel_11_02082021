@@ -1,9 +1,8 @@
 import React, {Component} from "react";
-import './Rating.css';
 
 class Rating extends Component {
     render() {
-        return <h1>Rating</h1>
+        return <i className="fas fa-star"></i>
     }
 }
 

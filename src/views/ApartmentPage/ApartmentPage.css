@@ -1,0 +1,82 @@
+@import '../../components/Carousel/Carousel.css';
+@import '../../components/Title/Title.css';
+@import '../../components/Tag/Tag.css';
+@import '../../components/Location/Location.css';
+@import '../../components/Profil/Profil.css';
+@import '../../components/Rating/Rating.css';
+@import '../../components/Collapsible/Collapsible.css';
+
+.apartmentInformations {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 2rem 4rem;
+}
+
+.apartmentBox {
+    max-width: calc(100% - 16rem);
+    margin: 0 4rem 0 0;
+}
+
+.apartmentTagsBox {
+    margin: 1rem 0 0;
+}
+
+.apartmentBoxAside {
+    width: 12rem;
+}
+
+.apartmentRatings {
+    margin: 1.5rem 0 0;
+    text-align: right;
+}
+
+.apartmentCollapsible {
+    margin: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.apartmentCollapsible .collapsibleVisible {
+    padding: 0;
+    width: 36.375rem;
+}
+
+@media screen and (max-width: 650px) {
+    .apartmentInformations {
+        display: flex;
+        flex-direction: column;
+        margin: 0 2rem;
+    }
+
+    .apartmentBox {
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+
+    .apartmentTagsBox {
+        display: flex;
+    }
+
+    .apartmentRatings {
+        width: 50%;
+        text-align: left;
+    }
+
+    .apartmentCollapsible {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .apartmentCollapsible .collapsibleArticle {
+        margin-bottom: 0;
+    }
+
+    .apartmentCollapsible .collapsibleVisible {
+        width: 20.9375rem;
+    }
+}

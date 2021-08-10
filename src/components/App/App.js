@@ -5,9 +5,9 @@ import {data} from '../../datas/data';
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-import HomePage from "../../views/HomePage";
-import AboutPage from '../../views/AboutPage';
-import ApartmentPage from "../../views/ApartmentPage";
+import HomePage from "../../views/HomePage/HomePage";
+import AboutPage from '../../views/AboutPage/AboutPage';
+import ApartmentPage from "../../views/ApartmentPage/ApartmentPage";
 
 function App() {
   return (

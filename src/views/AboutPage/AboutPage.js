@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import Collapsible from '../components/Collapsible/Collapsible';
-import AboutBanner from '../components/AboutBanner/AboutBanner';
-import {aboutData} from '../datas/aboutData';
+import {aboutData} from '../../datas/aboutData';
+import './AboutPage.css';
+import Collapsible from '../../components/Collapsible/Collapsible';
+import AboutBanner from '../../components/AboutBanner/AboutBanner';
 
 class AboutPage extends Component {
     render() {

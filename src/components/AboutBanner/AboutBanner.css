@@ -13,7 +13,7 @@
 .aboutBannerWrapper {
     height: 13.9375rem;
     border-radius: 1.5625rem;
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0, 0, 0, .4);
     position: absolute;
     top: 0%;
     width: 100%;
@@ -24,7 +24,8 @@
         margin: 0 2rem;
     }
 
-    .aboutBannerImg, .aboutBannerWrapper {
+    .aboutBannerImg,
+    .aboutBannerWrapper {
         border-radius: 10px;
     }
 }

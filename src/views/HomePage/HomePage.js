@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import HeroBanner from '../components/HeroBanner/HeroBanner';
-import ApartmentCard from '../components/ApartmentCard/ApartmentCard';
-import {data} from '../datas/data';
+import HeroBanner from '../../components/HeroBanner/HeroBanner';
+import ApartmentCard from '../../components/ApartmentCard/ApartmentCard';
+import {data} from '../../datas/data';
+import './HomePage.css';
 
 class HomePage extends Component {
     render() {
