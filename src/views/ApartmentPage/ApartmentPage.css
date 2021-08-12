@@ -6,6 +6,27 @@
 @import '../../components/Rating/Rating.css';
 @import '../../components/Collapsible/Collapsible.css';
 
+.apartmentBox {
+    max-width: calc(100%-16rem);
+    margin: 0 4rem 0 0;
+}
+
+.apartmentBoxAside {
+    width: 12rem;
+}
+
+.apartmentCollapsible {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 4rem;
+}
+
+.apartmentCollapsible .collapsibleVisible,
+.apartmentCollapsible .collapsibleContent {
+    width: 36.375rem;
+    padding: 0;
+}
+
 .apartmentInformations {
     display: flex;
     align-items: flex-start;
@@ -14,54 +35,19 @@
     margin: 2rem 4rem;
 }
 
-.apartmentBox {
-    max-width: calc(100% - 16rem);
-    margin: 0 4rem 0 0;
+.apartmentRatings {
+    text-align: right;
+    margin: 1.5rem 0 0;
 }
 
 .apartmentTagsBox {
     margin: 1rem 0 0;
 }
 
-.apartmentBoxAside {
-    width: 12rem;
-}
-
-.apartmentRatings {
-    margin: 1.5rem 0 0;
-    text-align: right;
-}
-
-.apartmentCollapsible {
-    margin: 2rem 4rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.apartmentCollapsible .collapsibleVisible {
-    padding: 0;
-    width: 36.375rem;
-}
-
 @media screen and (max-width: 650px) {
-    .apartmentInformations {
-        display: flex;
-        flex-direction: column;
-        margin: 0 2rem;
-    }
-
     .apartmentBox {
         max-width: 100%;
         margin-top: 1rem;
-    }
-
-    .apartmentTagsBox {
-        display: flex;
-    }
-
-    .apartmentRatings {
-        width: 50%;
-        text-align: left;
     }
 
     .apartmentCollapsible {
@@ -76,7 +62,23 @@
         margin-bottom: 0;
     }
 
-    .apartmentCollapsible .collapsibleVisible {
+    .apartmentCollapsible .collapsibleVisible,
+    .apartmentCollapsible .collapsibleContent {
         width: 20.9375rem;
+    }
+
+    .apartmentInformations {
+        display: flex;
+        flex-direction: column;
+        margin: 0 2rem;
+    }
+
+    .apartmentRatings {
+        width: 80%;
+        text-align: left;
+    }
+
+    .apartmentTagsBox {
+        display: flex;
     }
 }

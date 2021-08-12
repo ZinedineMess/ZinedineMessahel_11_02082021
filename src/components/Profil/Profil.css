@@ -1,16 +1,3 @@
-.apartmentProfil {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.apartmentNameHost {
-    margin: 0 1rem 0 0;
-    font-size: 1.125rem;
-    color: #FF6060;
-    font-weight: bold;
-}
-
 .apartmentImgHost {
     width: 4rem;
     height: 4rem;
@@ -18,21 +5,34 @@
     text-align: center;
 }
 
+.apartmentNameHost {
+    font-size: 1.125rem;
+    color: #FF6060;
+    font-weight: 700;
+    margin: 0 1rem 0 0;
+}
+
+.apartmentProfil {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 @media screen and (max-width: 650px) {
+    .apartmentImgHost {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .apartmentNameHost {
+        font-size: .75rem;
+    }
+
     .apartmentProfil {
         position: absolute;
         display: flex;
         justify-content: flex-end;
         right: 2rem;
         bottom: 12.5rem;
-    }
-
-    .apartmentNameHost {
-        font-size: 0.75rem;
-    }
-
-    .apartmentImgHost {
-        width: 3rem;
-        height: 3rem;
     }
 }

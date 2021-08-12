@@ -1,6 +1,6 @@
 .heroBanner {
-    margin: 0 4rem;
     position: relative;
+    margin: 0 4rem;
 }
 
 .heroBannerImg {
@@ -10,21 +10,11 @@
     border-radius: 1.5625rem;
 }
 
-.heroBannerWrapper {
-    height: 13.9375rem;
-    border-radius: 1.5625rem;
-    background-color: rgba(0, 0, 0, .4);
-    position: absolute;
-    top: 0%;
-    width: 100%;
-}
-
 .heroBannerText {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 80%;
-    margin: 0;
     color: #fff;
     text-align: center;
     text-shadow: 0 0 1px rgba(0, 0, 0, .7);
@@ -32,6 +22,16 @@
     font-weight: 500;
     font-size: 2rem;
     line-height: 142.6%;
+    margin: 0;
+}
+
+.heroBannerWrapper {
+    height: 13.9375rem;
+    border-radius: 1.5625rem;
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 @media screen and (max-width: 650px) {
@@ -42,7 +42,7 @@
     .heroBannerImg,
     .heroBannerWrapper {
         height: 6.9375rem;
-        border-radius: 0.625rem;
+        border-radius: .625rem;
     }
 
     .heroBannerText {

@@ -7,38 +7,73 @@ import Location from '../../components/Location/Location';
 import Profil from '../../components/Profil/Profil';
 import Rating from '../../components/Rating/Rating';
 import Collapsible from '../../components/Collapsible/Collapsible';
-// import {data} from '../datas/data';
 
 class ApartmentPage extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            apartment: this.getApartment(),
+        }
+    }
+
+    getApartment = () => {
+        const apartment = this.props.apartments.filter(
+            (apt) => apt.id === this.props.match.params.id
+        )
+        return apartment[0]
+    }
+
+    getTitle = () => {
+        return <Title title={this.state.apartment.title}/>
+    }
+
+    getLocation = () => {
+        return <Location location={this.state.apartment.location}/>
+    }
+
+    getTags = () => {
+        return (
+            <div className="apartmentTagsBox">
+                {this.state.apartment.tags.map((tag, index) => (
+                    <Tag tag={tag} key={index} />
+                ))}
+            </div>
+        )
+    }
+
+    getProfil = () => {
+        return <Profil host={this.state.apartment.host}/>
+    }
+
+    getRatings = () => {
+        return <Rating rating={this.state.apartment.rating}/>
+    }
+
+    getCollapsibles = () => {
+        return (
+            <section className="apartmentCollapsible">
+                <Collapsible title='Description' content={this.state.apartment.description}/>
+                <Collapsible title='Équipements' content={this.state.apartment.equipments}/>
+            </section>
+        )
+    }
+
     render() {
         return (
             <main>
-                <Carousel />
+                <Carousel pictures={this.state.apartment.pictures}/>
                 <section className="apartmentInformations">
                     <div className="apartmentBox">
-                        <Title />
-                        <Location />
-                        <div className="apartmentTagsBox">
-                            <Tag />
-                            <Tag />
-                            <Tag />
-                        </div>
+                        {this.getTitle()}
+                        {this.getLocation()}
+                        {this.getTags()}
                     </div>
                     <div className="apartmentBoxAside">
-                        <Profil />
-                        <div className="apartmentRatings">
-                            <Rating />
-                            <Rating />
-                            <Rating />
-                            <Rating />
-                            <Rating />
-                        </div>
+                        {this.getProfil()}
+                        {this.getRatings()}
                     </div>
                 </section>
-                <section className="apartmentCollapsible">
-                    <Collapsible />
-                    <Collapsible />
-                </section>
+                {this.getCollapsibles()}
             </main>
         )
     }

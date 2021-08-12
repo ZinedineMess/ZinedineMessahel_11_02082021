@@ -11,7 +11,7 @@ class HomePage extends Component {
                 <HeroBanner />
                 <section className="galleryApartmentCard">
                     {data.map((apartment) => {
-                        return <ApartmentCard key={apartment.id} cover={apartment.cover} title={apartment.title} />
+                        return <ApartmentCard key={apartment.id} id={apartment.id} cover={apartment.cover} title={apartment.title} />
                     })}
                 </section>
             </main>

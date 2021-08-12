@@ -1,6 +1,6 @@
 .aboutBanner {
-    margin: 0 4rem;
     position: relative;
+    margin: 0 4rem;
 }
 
 .aboutBannerImg {
@@ -15,7 +15,7 @@
     border-radius: 1.5625rem;
     background-color: rgba(0, 0, 0, .4);
     position: absolute;
-    top: 0%;
+    top: 0;
     width: 100%;
 }
 
