@@ -26,6 +26,7 @@ class Carousel extends Component {
             this.state.currentPictureIndex === 0
                 ? this.props.pictures.length - 1
                 : this.state.currentPictureIndex - 1
+
         this.setState({ currentPictureIndex: index })
     }
 
@@ -34,11 +35,8 @@ class Carousel extends Component {
             this.state.currentPictureIndex === this.props.pictures.length - 1
                 ? 0
                 : this.state.currentPictureIndex + 1
-        this.setState({ currentPictureIndex: index })
-    }
 
-    getPictures = () => {
-        return <img src={this.getSRC()} alt="appartement" className="carouselPictures"></img>
+        this.setState({ currentPictureIndex: index })
     }
 
     getNavigation = () => {
@@ -57,7 +55,7 @@ class Carousel extends Component {
         return (
             <article className="carousel">
                 <div className="carouselPicturesBox">
-                    {this.getPictures()}
+                    <img src={this.getSRC()} alt="appartement" className="carouselPictures"></img>
                     {this.getNavigation()}
                 </div>
             </article>

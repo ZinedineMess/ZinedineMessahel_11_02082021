@@ -7,6 +7,7 @@ import Location from '../../components/Location/Location';
 import Profil from '../../components/Profil/Profil';
 import Rating from '../../components/Rating/Rating';
 import Collapsible from '../../components/Collapsible/Collapsible';
+import { Redirect } from "react-router-dom";
 
 class ApartmentPage extends Component {
     constructor(props) {
@@ -20,15 +21,8 @@ class ApartmentPage extends Component {
         const apartment = this.props.apartments.filter(
             (apt) => apt.id === this.props.match.params.id
         )
+
         return apartment[0]
-    }
-
-    getTitle = () => {
-        return <Title title={this.state.apartment.title}/>
-    }
-
-    getLocation = () => {
-        return <Location location={this.state.apartment.location}/>
     }
 
     getTags = () => {
@@ -41,14 +35,6 @@ class ApartmentPage extends Component {
         )
     }
 
-    getProfil = () => {
-        return <Profil host={this.state.apartment.host}/>
-    }
-
-    getRatings = () => {
-        return <Rating rating={this.state.apartment.rating}/>
-    }
-
     getCollapsibles = () => {
         return (
             <section className="apartmentCollapsible">
@@ -59,18 +45,20 @@ class ApartmentPage extends Component {
     }
 
     render() {
+        if (!this.props.apartments.some((apt) => apt.id === this.props.match.params.id)) return <Redirect to="/404" />
+
         return (
             <main>
                 <Carousel pictures={this.state.apartment.pictures}/>
                 <section className="apartmentInformations">
                     <div className="apartmentBox">
-                        {this.getTitle()}
-                        {this.getLocation()}
+                        <Title title={this.state.apartment.title}/>
+                        <Location location={this.state.apartment.location}/>
                         {this.getTags()}
                     </div>
                     <div className="apartmentBoxAside">
-                        {this.getProfil()}
-                        {this.getRatings()}
+                        <Profil host={this.state.apartment.host}/>
+                        <Rating rating={this.state.apartment.rating}/>
                     </div>
                 </section>
                 {this.getCollapsibles()}

@@ -12,24 +12,24 @@ import Error404 from "../Error404/Error404";
 function App() {
   return (
     <Router>
-    <div className="App">
-      <Header />
-      <Switch>
-        <Route exact path='/'>
-            <HomePage />
-        </Route>
-        <Route exact path="/apartment/:id" render={(props) => (
-            <ApartmentPage {...props} apartments={data} />
-            )}/>
-        <Route exact path='/About'>
-          <AboutPage />
-        </Route>
-        <Route>
-              <Error404 />
-        </Route>
-      </Switch>
-      <Footer />
-    </div>
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route exact path='/'>
+              <HomePage />
+          </Route>
+          <Route exact path="/apartment/:id" render={(props) => (
+              <ApartmentPage {...props} apartments={data} />
+              )}/>
+          <Route exact path='/About'>
+            <AboutPage />
+          </Route>
+          <Route>
+            <Error404 />
+          </Route>
+        </Switch>
+        <Footer />
+      </div>
     </Router>
   );
 }
