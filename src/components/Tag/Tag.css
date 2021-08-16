@@ -1,0 +1,19 @@
+.apartmentTag {
+    display: inline-block;
+    border-radius: .5rem;
+    color: #fff;
+    background: #FF6060;
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: .25rem 1rem .25rem 0;
+    padding: .25rem 2rem;
+}
+
+@media screen and (max-width: 650px) {
+    .apartmentTag {
+        font-size: .625rem;
+        font-weight: 500;
+        margin: .25rem .5rem .25rem 0;
+        padding: .25rem 1rem;
+    }
+}
