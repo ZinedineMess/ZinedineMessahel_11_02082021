@@ -7,7 +7,7 @@ import AboutBanner from '../../components/AboutBanner/AboutBanner';
 class AboutPage extends Component {
     render() {
         return (
-            <main>
+            <main className='about'>
                 <AboutBanner />
                 {aboutData.map((data) => (
                     <Collapsible key={data.id} title={data.title} content={data.content} />

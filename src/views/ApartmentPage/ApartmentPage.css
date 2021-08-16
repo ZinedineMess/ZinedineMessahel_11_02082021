@@ -59,7 +59,8 @@
     }
 
     .apartmentCollapsible .collapsibleArticle {
-        margin-bottom: 0;
+        margin: 0 auto;
+        margin-bottom: 1rem;
     }
 
     .apartmentCollapsible .collapsibleVisible,
@@ -80,5 +81,20 @@
 
     .apartmentTagsBox {
         display: flex;
+    }
+}
+
+@media (max-width: 1300px) { 
+    .apartmentCollapsible {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .apartmentCollapsible .collapsibleArticle {
+        margin: 0 auto;
+        margin-bottom: 1rem;
     }
 }
